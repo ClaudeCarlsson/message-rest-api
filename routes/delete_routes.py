@@ -16,7 +16,7 @@ def delete_messages():
 
     # Loop through provided IDs and attempt to delete each message
     for message_id in ids:
-        message = Message.query.get(message_id)
+        message = db.session.get(Message, message_id)
         if message:
             db.session.delete(message)
             deleted_ids.append(message_id)
@@ -34,7 +34,7 @@ def delete_messages():
     }), 200
 
 def delete_message(id):
-    message = Message.query.get(id)
+    message = db.session.get(Message, id)
     if not message:
         return jsonify({"error": "Message not found"}), 404
 
