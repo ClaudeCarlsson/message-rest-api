@@ -33,7 +33,7 @@ message-rest-api/
 
 1. **Clone the Repository**:
    ```bash
-   git clone [https://github.com/your-username/message-rest-api.git](https://github.com/ClaudeCarlsson/message-rest-api)
+   git clone https://github.com/ClaudeCarlsson/message-rest-api
    cd message-rest-api
    ```
 
